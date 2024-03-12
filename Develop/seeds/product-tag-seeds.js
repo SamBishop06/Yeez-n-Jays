@@ -1,5 +1,5 @@
 const { ProductTag } = require('../models');
-// TODO: Check how many id tags there should be on here. These are just placeholders. 
+// TODO: Check how many id tags there should be on here. These are just placeholders.
 const productTagData = [
   {
     product_id: 1,
