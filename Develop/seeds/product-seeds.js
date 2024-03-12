@@ -4,6 +4,7 @@ const productData = [
   {
     //TODO: Fill in each table with data correlating to the sneaker's wireframe and items listed-
     //1s are being used as placeholders for now.
+
     product_name: 'adidas Mens Yeezy Boost 350',
     price: 446,
     stock: 20,
