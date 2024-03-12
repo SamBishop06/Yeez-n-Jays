@@ -1,7 +1,7 @@
 // import models
-//TODO: Do we need the onDelete property for this? 
+//TODO: Do we need the onDelete property for this?
 const Product = require('./Product');
-const Category = require('./Category');
+const Category = require('./category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
@@ -15,9 +15,9 @@ Product.belongsTo(Category, {
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
-})
+});
 
-// Categories have many Products 
+// Categories have many Products
 Product.belongsToMany(Tag, {
   through: ProductTag,
   as: 'productTag_products',
@@ -31,7 +31,7 @@ Tag.belongsToMany(Product, {
   as: 'productTag_products',
   foreignKey: 'tag_id',
   onDelete: 'CASCADE',
-})
+});
 // Tags belongToMany Products (through ProductTag)
 
 module.exports = {
