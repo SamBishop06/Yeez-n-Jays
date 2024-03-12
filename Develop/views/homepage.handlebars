@@ -1,0 +1,22 @@
+<main class="container mt-6">
+    <h1 class="mb-4 text-gray">Shop Yeez-n-Jays</h1>
+    <div class="row">
+        {{#each shoes}}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-warning">
+                    <h2 class="card-title">
+                        <a href="/shoes/{{id}}" class="text-light">{{title}}</a>
+                    </h2>
+                </div>
+                <div class="card-body text-light">
+                    <p>Yeez</p>
+                </div>
+                <div class="card-body text-light">
+                    <p>Jays</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</main>
