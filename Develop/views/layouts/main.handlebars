@@ -1,0 +1,56 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Yeez-n-Jays</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    </head>
+    <body class="bg-dark text-info">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-2" href="/"><strong>Yeez-n-Jays</strong></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/"><strong>Home</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/dashboard"><strong>Dashboard</strong></a>
+                            </li>
+                            {{#if logged_in}}
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#" id="yeeznjays-logout"><strong>Log Out</strong></a>
+                            </li>
+                            {{else}}
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/login"><strong>Log In</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/signup"><strong>Sign Up</strong></a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container" style="margin-bottom: 15vh;">
+            {{{body}}}
+        </div>
+        <footer class="bg-dark text-light py-3" style="position: fixed; bottom: 0; width:100%;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-center">
+                        <h3>&copy; 2024 Yeez-n-Jays All Rights Reserved</h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/public/js/script.js"></script>
+    </body>
+</html>
