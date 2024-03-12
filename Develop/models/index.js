@@ -1,7 +1,7 @@
 // import models
 //TODO: Do we need the onDelete property for this?
-const Product = require('./Product');
-const Category = require('.Category');
+const Product = require('./Products');
+const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
