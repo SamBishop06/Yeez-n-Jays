@@ -72,6 +72,35 @@ h2 {
     opacity: .9;
 }
 
+.responsive-img {
+    display: flex;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid tan;
+    max-width: 90%;
+    height: 200px;
+}
+
+.my-button {
+    display: flex;
+    background-color: black;
+    color: tan;
+    border: 2px solid tan;
+    margin: auto;
+    margin-top: 30px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Inknut Antiqua';
+}
+
+.my-button:hover {
+    background-color: tan;
+    border: 2px solid black;
+    color: black;
+}
+
 footer {
     display: flex;
     flex-direction: row;
