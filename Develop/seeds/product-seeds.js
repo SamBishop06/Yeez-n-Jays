@@ -2,7 +2,7 @@ const { Product } = require('../models');
 
 const productData = [
   {
-    //TODO: Fill in each table with data correlating to the sneaker's wireframe and items listed-
+    //Fill in each table with data correlating to the sneaker's wireframe and items listed-
     //1s are being used as placeholders for now.
 
     product_name: 'adidas Mens Yeezy Boost 350',
@@ -102,7 +102,7 @@ const productData = [
   },
 
   {
-    product_name: 'adidas Yeezy Foam RNR CLay Red',
+    product_name: 'adidas Yeezy Foam RNR Clay Red',
     price: 107,
     stock: 20,
     category_id: 3,
@@ -120,7 +120,7 @@ const productData = [
     category_id: 3,
   },
   {
-    product_name: 'adidas Yeezy FOam RNR Carbon',
+    product_name: 'adidas Yeezy Foam RNR Carbon',
     price: 139,
     stock: 20,
     category_id: 3,
