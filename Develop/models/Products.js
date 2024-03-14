@@ -53,6 +53,11 @@ Product.init(
       type: DataTypes.STRING, // Store tags as a comma-separated string
       allowNull: true, // Adjust requirements
     },
+    // Add a field for storing image URLs //TODO: can I add uri? images
+    image_url: {
+      type: DataTypes.STRING,
+      allowNull: true, // Allow products to have no image
+    },
   },
   {
     sequelize,
