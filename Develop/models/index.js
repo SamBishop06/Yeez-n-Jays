@@ -2,8 +2,7 @@
 //TODO: Do we need the onDelete property for this?
 const Product = require('./Products');
 const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+const Tag = require('./Tag'); //Import the tag model
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
@@ -17,26 +16,15 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
-// Categories have many Products
-Product.belongsToMany(Tag, {
-  through: ProductTag,
-  as: 'productTag_products',
-  foreignKey: 'product_id',
-  onDelete: 'CASCADE',
-});
+// Many-to-many relationship between Product and Tag
+Product.belongsToMany(Tag, {through: 'ProductTag' });
 
-// Products belongToMany Tags (through ProductTag)
-Tag.belongsToMany(Product, {
-  through: ProductTag,
-  as: 'productTag_products',
-  foreignKey: 'tag_id',
-  onDelete: 'CASCADE',
-});
-// Tags belongToMany Products (through ProductTag)
+// Many-to-many relationship between Tag and Product
+Tag.belongsToMany(Product, { through: 'ProductTag' });
 
 module.exports = {
   Product,
   Category,
-  Tag,
-  ProductTag,
+  Tag
+  //ProductTag,
 };

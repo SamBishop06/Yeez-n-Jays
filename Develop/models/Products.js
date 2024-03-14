@@ -1,3 +1,8 @@
+
+
+// TODO:add a field called 'tags' and that could be a string of data
+// product.findAll (where clause)- where 'tags in' - this should be in the routes files
+
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
@@ -43,6 +48,10 @@ Product.init(
         model: 'category',
         key: 'id',
       },
+    },
+    tags: {
+      type: DataTypes.STRING, // Store tags as a comma-separated string
+      allowNull: true, // Adjust requirements
     },
   },
   {
