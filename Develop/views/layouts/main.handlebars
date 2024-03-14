@@ -7,11 +7,11 @@
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'
     />
-    <link rel='stylesheet' type='text/css' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body class='bg-dark text-info'>
     <header>
-      <nav class='navbar navbar-expand-lg navbar-dark bg-secondary'>
+      <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
         <div class='container-fluid'>
           <a class='navbar-brand fs-2' href='/'><strong>Yeez-n-Jays</strong></a>
           <button
@@ -33,16 +33,20 @@
               </li>
               <li class='nav-item'>
                 <a class='nav-link text-light' href='/products'><strong
-                  >Products</strong></a>
+                  >Stock</strong></a>
               </li>
               {{#if logged_in}}
-                <li class='nav-item'>
-                  <a
-                    class='nav-link text-light'
-                    href='#'
-                    id='yeeznjays-logout'
-                  ><strong>Log Out</strong></a>
-                </li>
+              <li class="nav-item">
+                <a class='nav-link text-light' href='/shopping'><strong
+                  >Shopping Cart</strong></a>
+              </li>
+              <li class='nav-item'>
+                <a
+                  class='nav-link text-light'
+                  href='#'
+                  id='yeeznjays-logout'
+                ><strong>Log Out</strong></a>
+              </li>
               {{else}}
                 <li class='nav-item'>
                   <a class='nav-link text-light' href='/login'><strong>Log In</strong></a>
@@ -59,10 +63,7 @@
     <div class='container' style='margin-bottom: 15vh;'>
       {{{body}}}
     </div>
-    <footer
-      class='bg-dark text-light py-3'
-      style='position: fixed; bottom: 0; width:100%;'
-    >
+    <footer class="bg-dark">
       <div class='container'>
         <div class='row justify-content-center'>
           <div class='col-md-5 text-center'>
@@ -71,6 +72,6 @@
         </div>
       </div>
     </footer>
-    <script src='/public/js/script.js'></script>
+    <script src='js/script.js'></script>
   </body>
 </html>

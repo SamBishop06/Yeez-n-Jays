@@ -9,6 +9,7 @@ const productData = [
     price: 446,
     stock: 20,
     category_id: 1,
+    image_uri: ''
   },
   {
     product_name: 'adidas Mens Boost 350 V2',

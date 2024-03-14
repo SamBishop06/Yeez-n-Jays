@@ -2,89 +2,9 @@ body {
     background-color: black;
 }
 
-.alpha {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: tan;
-    border: 2px solid tan;
-    padding: 10px;
-    font-family: 'Sedgwick Ave';
-    font-size: 20px;
-    text-shadow: 0px 5px 5px black;
-    background-image: linear-gradient(to bottom, black, rgb(202, 185, 162));
-    border-radius: 10px 10px 10px 10px;
-    opacity: .9;
-}
-
-#beta {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    color: tan;
-    padding: 10px;
-    font-family: 'Sedgwick Ave';
-    opacity: .9;
-}
-
-.zeta {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-right: 10px;
-    color: tan;
-    padding: 10px;
+h1 {
     font-family: 'Inknut Antiqua';
-    font-size: 12px;
-}
-
-.eta {
-    padding: 10px;
-    text-shadow: 0px 2px 2px black;
-}
-
-.theta {
-    padding: 10px;
-    text-shadow: 0px 2px 2px black;
-}
-
-.iota {
-    padding: 10px;
-    text-shadow: 0px 2px 2px black;
-}
-
-.navbar-nav {
-    list-style: none;
-    padding-left: 0;
-}
-
-.gamma {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    width: 98.3vw;
-    height: 45vh;
-    margin-top: 5.5vh;
-}
-
-.delta {
-    width: 40vw;
-    height: 40vh;
-    border: 2px solid tan;
-    background-image: linear-gradient(to bottom, black, rgb(202, 185, 162));
-    border-radius: 10px 10px 10px 10px;
-}
-
-.epsilon {
-    width: 40vw;
-    height: 40vh;
-    border: 2px solid tan;
-    background-image: linear-gradient(to bottom, black, rgb(202, 185, 162));
-    border-radius: 10px 10px 10px 10px;
+    color: lightgray;
 }
 
 h2 {
@@ -92,40 +12,10 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: tan;
+    color: lightgray;
     padding: 2px;
     font-family: 'Inknut Antiqua';
     font-size: 20px;
-}
-
-.responsive-img {
-    display: flex;
-    margin: auto;
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid tan;
-    max-width: 90%;
-    max-height: 40%;
-    height: 200px;
-}
-
-.my-button {
-    display: flex;
-    background-color: black;
-    color: tan;
-    border: 2px solid tan;
-    margin: auto;
-    margin-top: 30px;
-    padding: 4px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Inknut Antiqua';
-}
-
-.my-button:hover {
-    background-color: tan;
-    border: 2px solid black;
-    color: black;
 }
 
 footer {
@@ -133,12 +23,99 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: tan;
-    border: 2px solid tan;
+    color: lightgray;
     padding: 10px;
     margin-top: 2vh;
     font-family: 'Inknut Antiqua';
-    background-image: linear-gradient(to bottom, black, rgb(202, 185, 162));
-    border-radius: 10px 10px 10px 10px;
-    opacity: .9;
+    background-color: black;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, gray, black);
+}
+  
+.card-header {
+    padding: 10px;
+}
+  
+.card-header img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+  
+.card-header h2 {
+    margin-top: 10px;
+}
+  
+.card-header h3 {
+    margin-top: 5px;
+    color: lightgray;
+}
+
+.btn-custom {
+    background-image: linear-gradient(to bottom, gray, black);
+    color: lightgray;
+    border-color: lightgray;
+    font-weight: bold;
+}
+  
+.btn-custom:hover {
+    background-color: lightgray;
+    color: black;
+    border-color: lightgray;
+}
+
+/* Like Button Styling */
+
+.like-button {
+    background-color: lightgray;
+    color: black;
+    border: 2px solid lightgray;
+    font-family: 'Inknut Antiqua';
+    font-weight: bolder;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+  
+.like-button:hover {
+    background-color: black;
+    color: white;
+    border-color: lightgray;
+}
+  
+.like-button:active {
+    background-color: black;
+    border-color: lightgray;
+}
+
+/* Login Page Styling */
+.yeeznjays-login-form {
+    font-family: 'Inknut Antiqua';
+    font-weight: bolder;
+    color: lightgray;
+}
+
+.form-label {
+    font-size: 18px;
+}
+
+.form-control {
+    font-size: 16px;
+}
+
+.btn {
+    font-size: 16px;
 }
