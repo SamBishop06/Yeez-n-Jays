@@ -1,4 +1,4 @@
-//Login handler from week 14 activities
+// Login handler from week 14 activities
 const loginFormHandler = async (event) => {
   event.preventDefault();
   console.log('Hello');
@@ -10,7 +10,7 @@ const loginFormHandler = async (event) => {
     .value.trim();
 
   if (username && password) {
-    // TODO: fetch request returning error, bad request
+  // Fetch request returning error, bad request
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       console.log('Response is OK');
-      // document.location.replace('/');
+      document.location.replace('/');
     } else {
       alert('Failed to log in');
     }
