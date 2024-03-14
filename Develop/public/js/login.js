@@ -1,6 +1,7 @@
 //Login handler from week 14 activities
 const loginFormHandler = async (event) => {
   event.preventDefault();
+  console.log('Hello');
   const username = document
     .querySelector('#username-yeeznjays-login')
     .value.trim();
@@ -8,15 +9,17 @@ const loginFormHandler = async (event) => {
     .querySelector('#password-yeeznjays-login')
     .value.trim();
 
-  if (email && password) {
+  if (username && password) {
+    // TODO: fetch request returning error, bad request
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      console.log('Response is OK');
+      // document.location.replace('/');
     } else {
       alert('Failed to log in');
     }

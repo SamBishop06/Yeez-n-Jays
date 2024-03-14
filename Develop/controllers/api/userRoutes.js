@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     // Find user by either username or email, whichever one was used to login.
-    const userData = await User.findOne({ where: {} });
+    const userData = await User.findOne({ where: {username: req.body.username } });
 
     if (!userData) {
       res
@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
     }
     // Verify password with the database.
     const validPassword = await userData.checkPassword(
-      'INSERT USER INPUT HERE'
+      req.body.password
     );
 
     if (!validPassword) {
@@ -44,6 +44,14 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again.' });
       return;
     }
+
+  // Need to save user session but is causing password field to malfunction
+  //   req.session.save(() => {
+  //     req.session.user_id=userData.id;
+  //     req.session.logged_in=true;
+  //     res.json({user:userData, message:'You are Logged In.'});
+  // });
+
   } catch (err) {
     res.status(400).json(err);
   }

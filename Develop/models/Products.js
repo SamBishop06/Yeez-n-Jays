@@ -49,10 +49,10 @@ Product.init(
         key: 'id',
       },
     },
-    tags: {
-      type: DataTypes.STRING, // Store tags as a comma-separated string
-      allowNull: true, // Adjust requirements
-    },
+    // tags: {
+    //   type: DataTypes.STRING, // Store tags as a comma-separated string
+    //   allowNull: true, // Adjust requirements
+    // },
   },
   {
     sequelize,
