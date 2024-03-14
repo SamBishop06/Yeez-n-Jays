@@ -1,5 +1,5 @@
 const withAuth = (req, res, next) => {
-// TODO: if user is not logged in, redirect to /login page.
+// If user is not logged in, redirect to /login page.
 if () {
 
 } else {

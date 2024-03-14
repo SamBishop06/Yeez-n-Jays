@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 //Route: Log in.
 router.post('/login', async (req, res) => {
   try {
-    // TODO: Find user by either username or email, whichever one was used to login.
+    // Find user by either username or email, whichever one was used to login.
     const userData = await User.findOne({ where: {} });
 
     if (!userData) {
@@ -33,7 +33,7 @@ router.post('/login', async (req, res) => {
         .status(400)
         .json({ message: 'Incorrect email or password. Please try again.' });
     }
-    // TODO: Verify password with the database.
+    // Verify password with the database.
     const validPassword = await userData.checkPassword(
       'INSERT USER INPUT HERE'
     );
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  //if user is logged in, log them out
+  // If user is logged in, log them out
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
