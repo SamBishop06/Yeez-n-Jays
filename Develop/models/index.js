@@ -18,10 +18,10 @@ Category.hasMany(Product, {
 });
 
 // Many-to-many relationship between Product and Tag
-Product.belongsToMany(Tag, {through: 'ProductTag' });
+//Product.belongsToMany(Tag, {});
 
 // Many-to-many relationship between Tag and Product
-Tag.belongsToMany(Product, { through: 'ProductTag' });
+//Tag.belongsToMany(Product, {});
 
 module.exports = {
   Product,

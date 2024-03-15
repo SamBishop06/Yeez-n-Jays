@@ -49,15 +49,19 @@ Product.init(
         key: 'id',
       },
     },
-    tags: {
-      type: DataTypes.STRING, // Store tags as a comma-separated string
-      allowNull: true, // Adjust requirements
-    },
+    //tags: {
+    //type: DataTypes.STRING, // Store tags as a comma-separated string
+    //allowNull: true,
+    //references: {
+    //model: 'tag',
+    //key: 'tag_name',
+    //},
+    //},
     // Add a field for storing image URLs //TODO: can I add uri? images
-    image_url: {
-      type: DataTypes.STRING,
-      allowNull: true, // Allow products to have no image
-    },
+    //image_url: {
+    //type: DataTypes.STRING,
+    //allowNull: true, // Allow products to have no image
+    //},
   },
   {
     sequelize,
