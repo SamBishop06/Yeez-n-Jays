@@ -49,7 +49,10 @@ Product.init(
         key: 'id',
       },
     },
-
+    image_uri: {
+      type: DataTypes.TEXT('long'),
+      allowNull: true
+    },
     //tags: {
     //type: DataTypes.STRING, // Store tags as a comma-separated string
     //allowNull: true,
