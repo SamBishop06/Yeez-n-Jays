@@ -110,10 +110,13 @@ footer {
 
 .form-label {
     font-size: 18px;
+    font-weight: bolder;
 }
 
 .form-control {
     font-size: 16px;
+    font-weight: bolder;
+    width: 200px;
 }
 
 .btn {
