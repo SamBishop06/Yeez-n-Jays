@@ -7,6 +7,7 @@
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body class='bg-dark text-info'>
@@ -25,27 +26,20 @@
           >
             <span class='navbar-toggler-icon'></span>
           </button>
-          <div class='collapse navbar-collapse' id='navbarNav'>
-            <ul class='navbar-nav'>
+          <div class='collapse navbar-collapse justify-content-end' id='navbarNav'>
+            <ul class='navbar-nav ms-auto'>
               <li class='nav-item'>
-                <a class='nav-link text-light' href='/'><strong
-                  >Home</strong></a>
+                <a class='nav-link text-light' href='/'><strong>Home</strong></a>
               </li>
               <li class='nav-item'>
-                <a class='nav-link text-light' href='/products'><strong
-                  >Stock</strong></a>
+                <a class='nav-link text-light' href='/products'><strong>Stock</strong></a>
               </li>
               {{#if logged_in}}
               <li class="nav-item">
-                <a class='nav-link text-light' href='/shopping'><strong
-                  >Shopping Cart</strong></a>
+                <a class='nav-link text-light' href='/shopping'><strong>Shopping Cart</strong></a>
               </li>
               <li class='nav-item'>
-                <a
-                  class='nav-link text-light'
-                  href='#'
-                  id='yeeznjays-logout'
-                ><strong>Log Out</strong></a>
+                <a class='nav-link text-light' href='#' id='yeeznjays-logout'><strong>Log Out</strong></a>
               </li>
               {{else}}
                 <li class='nav-item'>
@@ -73,5 +67,6 @@
       </div>
     </footer>
     <script src='js/script.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
   </body>
 </html>
