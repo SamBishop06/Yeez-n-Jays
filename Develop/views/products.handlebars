@@ -7,7 +7,9 @@
           <img src={{shoe.image_uri}} alt="Placeholder">
           <h2>{{shoe.product_name}}</h2>
           <h3>${{shoe.price}}</h3>
-          <button class="btn btn-outline-primary like-button">Add To Cart</button>
+          <button class="btn btn-outline-primary like-button">
+            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+          </button>
         </div>
       </div>
     {{/each}}
