@@ -24,4 +24,13 @@ router.get('/products', async (req, res) => {
   }
 });
 
+// router.get('/cart', withAuth, async (req, res) => {
+//   try {
+//     const cartData =
+
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// })
+
 module.exports = router;

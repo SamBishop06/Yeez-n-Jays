@@ -1,7 +1,6 @@
 //Login handler from week 14 activities
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log('Hello');
   const username = document
     .querySelector('#username-yeeznjays-login')
     .value.trim();
@@ -19,13 +18,12 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       console.log('Response is OK');
-      // document.location.replace('/');
+      document.location.replace('/products');
     } else {
       alert('Failed to log in');
     }
   }
 };
-
 document
   .querySelector('.yeeznjays-login-form')
   .addEventListener('submit', loginFormHandler);
