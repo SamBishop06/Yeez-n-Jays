@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const argon2 = require('argon2');
 const User = require('../../models/User');
 
 // CREATE a new user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     // Create the newUser with the hashed password and save to DB
     const userData = await User.create(newUser);
