@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 //Route: Log in.
 router.post('/login', async (req, res) => {
   try {
-    // Find user by either username or email, whichever one was used to login.
+    // Find user by either username
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
@@ -33,7 +33,9 @@ router.post('/login', async (req, res) => {
     }
     // Verify password with the database.
     const validPassword = await userData.checkPassword(req.body.password);
-
+    console.log(validPassword);
+    console.log(userData.id);
+    console.log(req.session);
     if (!validPassword) {
       res
         .status(400)
@@ -41,7 +43,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // Need to save user session but is causing password field to malfunction
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -54,7 +55,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   // If user is logged in, log them out
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
