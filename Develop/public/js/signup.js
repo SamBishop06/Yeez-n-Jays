@@ -3,30 +3,31 @@ const signUpFormHandler = async (event) => {
   event.preventDefault();
   const newUsername = document.querySelector('#username').value.trim();
   const newPassword = document.querySelector('#password').value.trim();
-  // Function to check if username already exists
-  function checkUsernameAvailability(newUsername) {
-    return database.query('SELECT COUNT (*) FROM users WHERE username = ?', [newUsername]) > 0;
-  }
+  const newEmail = document.querySelector('#email').value.trim();
   // If else statement verifies that username is unique, password is populated, and post new user to db
-  if (checkUsernameAvailability) {
-    alert('Username not available. Please select another username.');
-  } else if (newPassword === null) {
-    alert('Password cannot be empty');
-  } else if (newUsername && newPassword) {
-    const response = await fetch('../api/users/', {
+  if (!newUsername && !newEmail && !newPassword) {
+    alert('Please complete the sign-up form');
+  } else if (!newUsername) {
+    alert('Username can not be blank.');
+  } else if (!newEmail) {
+    alert('Email can not be blank.');
+  } else if (!newPassword) {
+    alert('Password can not be blank.');
+  } else if (newUsername && newEmail && newPassword) {
+    console.log(newUsername, newEmail, newPassword);
+    const response = await fetch('/api/users/signup', {
       method: 'POST',
-      body: JSON.stringify({newUsername, newPassword}),
+      body: JSON.stringify({newUsername, newEmail, newPassword}),
       headers: { 'Content-Type': 'application/json'},
     });
 
-    console.log('New user successfuly created');
-
     if (response.ok) {
+      alert('New user successfuly created! Welcome to Yeez-N-Jays!');
       document.location.replace('/');
     } else {
-      alert('Failed to log in');
+      alert('Sign-up failed');
     }
   }
 };
 
-document.querySelector('#signup-form').addEventListener('submit', signUpFormHandler);
+document.getElementById('signup-form').addEventListener('submit', signUpFormHandler);

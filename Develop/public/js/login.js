@@ -7,8 +7,14 @@ const loginFormHandler = async (event) => {
   const password = document
     .querySelector('#password-yeeznjays-login')
     .value.trim();
-
-  if (username && password) {
+  console.log('test', username);
+  if (!username && !password) {
+    alert('Username and password can not be blank.');
+  } else if (!username) {
+    alert('Username can not be blank.');
+  } else if (!password) {
+    alert('Password can not be blank.');
+  } else if (username && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
@@ -19,7 +25,7 @@ const loginFormHandler = async (event) => {
       console.log('Response is OK');
       document.location.replace('/');
     } else {
-      alert('Failed to log in');
+      alert('Failed to log in. Please check your credentials.');
     }
   }
 };

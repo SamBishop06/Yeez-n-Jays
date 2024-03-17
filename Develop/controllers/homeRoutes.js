@@ -26,6 +26,10 @@ router.get('/products', async (req, res) => {
   }
 });
 
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 // router.get('/cart', withAuth, async (req, res) => {
 //   try {
 //     const cartData = await Cart.findAll({where: {}});
