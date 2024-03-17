@@ -4,6 +4,7 @@ const Product = require('./Products');
 const Category = require('./Category');
 const Tag = require('./Tag'); //Import the tag model
 const User = require('./User');
+const Cart = require('./Cart');
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
@@ -23,10 +24,12 @@ Category.hasMany(Product, {
 // Many-to-many relationship between Tag and Product
 //Tag.belongsToMany(Product, {});
 
+//TODO: Set up relationship between Cart and Product and User
+
 module.exports = {
   Product,
   Category,
   Tag,
-  User
+  User,
   //ProductTag,
 };

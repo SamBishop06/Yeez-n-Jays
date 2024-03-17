@@ -1,5 +1,3 @@
-
-
 // TODO:add a field called 'tags' and that could be a string of data
 // product.findAll (where clause)- where 'tags in' - this should be in the routes files
 
@@ -51,7 +49,7 @@ Product.init(
     },
     image_uri: {
       type: DataTypes.TEXT('long'),
-      allowNull: true
+      allowNull: true,
     },
     //tags: {
     //type: DataTypes.STRING, // Store tags as a comma-separated string
@@ -66,12 +64,6 @@ Product.init(
     //   type: DataTypes.STRING, // Store tags as a comma-separated string
     //   allowNull: true, // Adjust requirements
     // },
-
-    // Add a field for storing image URLs //TODO: can I add uri? images
-    //image_url: {
-    //type: DataTypes.STRING,
-    //allowNull: true, // Allow products to have no image
-    //},
   },
   {
     sequelize,

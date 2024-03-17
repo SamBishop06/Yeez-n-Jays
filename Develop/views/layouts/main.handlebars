@@ -8,18 +8,27 @@
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
+    />
     <link rel='stylesheet' href='/css/style.css' />
-        <link
-      href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
-      rel="stylesheet"
+    <link
+      href='https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap'
+      rel='stylesheet'
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Inknut Antiqua"
-      rel="stylesheet"
+      href='https://fonts.googleapis.com/css?family=Inknut Antiqua'
+      rel='stylesheet'
     />
-    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Handgloves&display=swap">
+    <link
+      href='https://fonts.googleapis.com/css2?family=Honk&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css2?family=PT+Sans+Handgloves&display=swap'
+    />
   </head>
   <body class='bg-dark text-info'>
     <header>
@@ -37,21 +46,31 @@
           >
             <span class='navbar-toggler-icon'></span>
           </button>
-          <div class='collapse navbar-collapse justify-content-end' id='navbarNav'>
+          <div
+            class='collapse navbar-collapse justify-content-end'
+            id='navbarNav'
+          >
             <ul class='navbar-nav ms-auto'>
               <li class='nav-item'>
-                <a class='nav-link text-light' href='/'><strong>Home</strong></a>
+                <a class='nav-link text-light' href='/'><strong
+                  >Home</strong></a>
               </li>
               <li class='nav-item'>
-                <a class='nav-link text-light' href='/products'><strong>Stock</strong></a>
+                <a class='nav-link text-light' href='/products'><strong
+                  >Stock</strong></a>
               </li>
               {{#if logged_in}}
-              <li class="nav-item">
-                <a class='nav-link text-light' href='/shopping'><strong>Shopping Cart</strong></a>
-              </li>
-              <li class='nav-item'>
-                <a class='nav-link text-light' href='#' id='yeeznjays-logout'><strong>Log Out</strong></a>
-              </li>
+                <li class='nav-item'>
+                  <a class='nav-link text-light' href='/cart'><strong>Shopping
+                      Cart</strong></a>
+                </li>
+                <li class='nav-item'>
+                  <a
+                    class='nav-link text-light'
+                    href='#'
+                    id='yeeznjayz-logout'
+                  ><strong>Log Out</strong></a>
+                </li>
               {{else}}
                 <li class='nav-item'>
                   <a class='nav-link text-light' href='/login'><strong>Log In</strong></a>
@@ -68,7 +87,7 @@
     <div class='container' style='margin-bottom: 15vh;'>
       {{{body}}}
     </div>
-    <footer class="bg-dark">
+    <footer class='bg-dark'>
       <div class='container'>
         <div class='row justify-content-center'>
           <div class='col-md-5 text-center'>
@@ -77,7 +96,13 @@
         </div>
       </div>
     </footer>
-    <script src='js/script.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>
+    <script src='/js/script.js'></script>
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
+    ></script>
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+
   </body>
 </html>

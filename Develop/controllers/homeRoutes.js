@@ -7,21 +7,32 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', {
+    logged_in: req.session.logged_in,
+  });
 });
 
 router.get('/products', async (req, res) => {
-  // res.render('dashboard');
   try {
     const productData = await Product.findAll();
 
     const shoes = productData.map((post) => post.get({ plain: true }));
     res.render('products', {
       shoes,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// router.get('/cart', withAuth, async (req, res) => {
+//   try {
+//     const cartData = await Cart.findAll({where: {}});
+
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
