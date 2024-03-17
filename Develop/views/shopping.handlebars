@@ -1,13 +1,15 @@
 <main class='card-container'>
-  <h1 class="text-center">My FAVs</h1>
+  <h1 class="text-center honk">Yeez-n-Jays Stock</h1>
   <div class="row justify-content-center">
     {{#each shoes as |shoe|}}
       <div class='card col-md-3 m-3'>
         <div class='card-header'>
-          <img src={{shoe.image_uri}} alt="Placeholder">
+          <img src={{shoe.image_uri}} alt={{shoe.product_name}}/>
           <h2>{{shoe.product_name}}</h2>
           <h3>${{shoe.price}}</h3>
-          <button class="btn btn-outline-primary like-button">FAV</button>
+          <button class="btn btn-outline-primary like-button">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
         </div>
       </div>
     {{/each}}
