@@ -1,7 +1,6 @@
 // Login handler from week 14 activities
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  console.log('Hello');
   const username = document
     .querySelector('#username-yeeznjays-login')
     .value.trim();
@@ -10,7 +9,6 @@ const loginFormHandler = async (event) => {
     .value.trim();
 
   if (username && password) {
-  // Fetch request returning error, bad request
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
@@ -25,7 +23,6 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
 document
   .querySelector('.yeeznjays-login-form')
   .addEventListener('submit', loginFormHandler);

@@ -1,12 +1,33 @@
 const { Tag } = require('../models');
 
 const tagData = [
-  //TODO: Place ids in the '' based off of wireframing data.
+  //Place ids in the '' based off of wireframing data.
   {
     tag_name: 'Yeezy',
   },
   {
     tag_name: 'Jordans',
+  },
+  {
+    tag_name: 'Sneakers',
+  },
+  {
+    tag_name: 'Boost',
+  },
+  {
+    tag_name: 'Foam RNR',
+  },
+  {
+    tag_name: 'Slides',
+  },
+  {
+    tag_name: 'Jordan 1',
+  },
+  {
+    tag_name: 'Jordan 4',
+  },
+  {
+    tag_name: 'Jordan 11',
   },
   {
     tag_name: 'Red October',
@@ -27,6 +48,9 @@ const tagData = [
     tag_name: 'Wave Runner',
   },
   {
+    tag_name: 'Oil',
+  },
+  {
     tag_name: 'Utility Black',
   },
   {
@@ -45,7 +69,22 @@ const tagData = [
     tag_name: 'Cinder',
   },
   {
+    tag_name: 'Desert Sand',
+  },
+  {
     tag_name: 'High OG',
+  },
+  {
+    tag_name: 'Low OG',
+  },
+  {
+    tag_name: 'Chicago Lost and Found',
+  },
+  {
+    tag_name: 'Pure',
+  },
+  {
+    tag_name: 'Bone',
   },
   {
     tag_name: 'Black White',
