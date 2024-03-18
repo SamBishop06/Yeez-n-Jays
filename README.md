@@ -23,13 +23,23 @@ No Installation is required for this application. The user can access the applic
 
 ## Usage
 
+At the Home Page the User can make a selection from the Navigation Bar to view Stock, Log in, or Sign Up. The User can also click on the Company Logo or Shop Link to access Yeez-N-Jays stock. Once the User is logged in, the user can add items to their shopping cart by clicking on the shopping cart logo. Shopping Cart and Checkout functionality is an opportunity for future development.
+
 ## Credits
 
 Yeez-n-Jays was done in collaboration with coding students Samuel Bishop, Angela Cortes, Martin "Gabe" Harvey, Joseph Henry, and Oscar Thomas.
 
 ## Screenshots
 
+Home Page:
+![Alt Text](/Develop/public/images/home-page.png)
+
+Stock Page:
+![Alt Text](/Develop/public/images/stock-page.png)
+
 ## Video
+
+N/A
 
 ## Link to Website
 
