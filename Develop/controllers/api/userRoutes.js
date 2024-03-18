@@ -8,8 +8,8 @@ router.post('/signup', async (req, res) => {
     // Create the newUser with the hashed password and save to DB
     const userData = await User.create({
       username: req.body.newUsername,
-      password: req.body.newPassword,
       email: req.body.newEmail,
+      password: req.body.newPassword,
     });
 
     req.session.save(() => {

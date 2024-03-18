@@ -14,13 +14,13 @@ const signUpFormHandler = async (event) => {
   } else if (!newPassword) {
     alert('Password can not be blank.');
   } else if (newUsername && newEmail && newPassword) {
-    console.log(newUsername, newEmail, newPassword);
+
     const response = await fetch('/api/users/signup', {
       method: 'POST',
       body: JSON.stringify({ newUsername, newEmail, newPassword }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response);
+
     if (response.ok) {
       alert('New user successfuly created! Welcome to Yeez-N-Jays!');
       document.location.replace('/');
