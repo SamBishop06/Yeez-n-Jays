@@ -17,8 +17,8 @@ const signUpFormHandler = async (event) => {
 
     const response = await fetch('/api/users/signup', {
       method: 'POST',
-      body: JSON.stringify({newUsername, newEmail, newPassword}),
-      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify({ newUsername, newEmail, newPassword }),
+      headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
@@ -30,4 +30,6 @@ const signUpFormHandler = async (event) => {
   }
 };
 
-document.getElementById('signup-form').addEventListener('submit', signUpFormHandler);
+document
+  .getElementById('signup-form')
+  .addEventListener('submit', signUpFormHandler);

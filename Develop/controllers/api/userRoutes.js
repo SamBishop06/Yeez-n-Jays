@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const User = require('../../models/User');
-
+const argon2 = require('argon2');
+const { User, Cart } = require('../../models');
+const withAuth = require('../../utils/auth');
 // CREATE a new user
 router.post('/signup', async (req, res) => {
   try {
@@ -8,7 +9,7 @@ router.post('/signup', async (req, res) => {
     const userData = await User.create({
       username: req.body.newUsername,
       email: req.body.newEmail,
-      password: req.body.newPassword
+      password: req.body.newPassword,
     });
 
     req.session.save(() => {
@@ -29,6 +30,7 @@ router.post('/login', async (req, res) => {
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
+    console.log(userData.id);
 
     if (!userData) {
       return res
@@ -62,6 +64,17 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.post('/cart', withAuth, async (req, res) => {
+  try {
+    await Cart.create({
+      product_id: req.body.product_id,
+      user_id: req.session.user_id,
+    });
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
 
