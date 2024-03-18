@@ -1,17 +1,21 @@
+/* Primary Background Color of Website */
 body {
     background-color: black;
 }
 
+/* Primary Font Color of any Main Title prior to Google Fonts Application */
 h1 {
     color: lightgray;
 }
 
+/* Title Styling on Each Page */
 .honk {
     font-family: 'Honk';
     font-size: 55px;
     text-decoration: none;
 }
 
+/* Styling of Font in Each Product Card */
 h2 {
     display: flex;
     flex-direction: row;
@@ -23,6 +27,7 @@ h2 {
     font-size: 20px;
 }
 
+/* Styling and Positioning of Main Logo on Home Page */
 .main img {
     display: flex;
     margin: auto;
@@ -32,6 +37,7 @@ h2 {
     height: auto;
 }
 
+/* Styling Features of Footer on Each Page */
 footer {
     display: flex;
     flex-direction: row;
@@ -43,12 +49,14 @@ footer {
     background-color: black;
 }
 
+/* Positioning of Product Cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Styling Features for Each Card on Stock Page and Shopping Cart Page */
 .card {
     width: 200px;
     margin: 10px;
@@ -117,9 +125,11 @@ footer {
     font-weight: bolder;
 }
 
+/* Login Page and Sign Up Page Input Fields Styling */
 .form-label {
     font-size: 18px;
     font-weight: bolder;
+    color: white;
 }
 
 .form-control {
@@ -132,6 +142,7 @@ footer {
     font-size: 16px;
 }
 
+/* Remove Item from Shopping Cart Styling */
 .remove-button {
     background-color: lightgray;
     color: red;
@@ -152,6 +163,7 @@ footer {
     border-color: lightgray;
 }
 
+/* Checkout Button Styling */
 .checkout {
     background-image: linear-gradient(to bottom, #184d4f, #3d8b8d, #6ab8b8, #3d8b8d, #184d4f);
     color: white;
