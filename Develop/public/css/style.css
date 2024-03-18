@@ -1,17 +1,21 @@
+/* Primary Background Color of Website */
 body {
     background-color: black;
 }
 
+/* Primary Font Color of any Main Title prior to Google Fonts Application */
 h1 {
     color: lightgray;
 }
 
+/* Title Styling on Each Page */
 .honk {
     font-family: 'Honk';
     font-size: 55px;
     text-decoration: none;
 }
 
+/* Styling of Font in Each Product Card */
 h2 {
     display: flex;
     flex-direction: row;
@@ -23,6 +27,7 @@ h2 {
     font-size: 20px;
 }
 
+/* Styling and Positioning of Main Logo on Home Page */
 .main img {
     display: flex;
     margin: auto;
@@ -32,6 +37,7 @@ h2 {
     height: auto;
 }
 
+/* Styling Features of Footer on Each Page */
 footer {
     display: flex;
     flex-direction: row;
@@ -43,12 +49,14 @@ footer {
     background-color: black;
 }
 
+/* Positioning of Product Cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Styling Features for Each Card on Stock Page and Shopping Cart Page */
 .card {
     width: 200px;
     margin: 10px;
@@ -115,12 +123,13 @@ footer {
 /* Login Page Styling */
 .yeeznjays-login-form {
     font-weight: bolder;
-    color: lightgray;
 }
 
+/* Login Page and Sign Up Page Input Fields Styling */
 .form-label {
     font-size: 18px;
     font-weight: bolder;
+    color: white;
 }
 
 .form-control {
@@ -131,4 +140,51 @@ footer {
 
 .btn {
     font-size: 16px;
+}
+
+/* Remove Item from Shopping Cart Styling */
+.remove-button {
+    background-color: lightgray;
+    color: red;
+    border: 2px solid lightgray;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.remove-button:hover {
+    background-color: black;
+    color: red;
+    border-color: lightgray;
+}
+
+.remove-button:active {
+    background-color: black;
+    border-color: lightgray;
+}
+
+/* Checkout Button Styling */
+.checkout {
+    background-image: linear-gradient(to bottom, #184d4f, #3d8b8d, #6ab8b8, #3d8b8d, #184d4f);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout:hover {
+    background-image: linear-gradient(to bottom, #49a078, #7ec4a3, #b0d9cc, #7ec4a3, #49a078);
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+
+.checkout:active {
+    background-image: linear-gradient(to bottom, #49a078, #7ec4a3, #b0d9cc, #7ec4a3, #49a078);
+    color: white;
+    border: 2px solid white;
 }
