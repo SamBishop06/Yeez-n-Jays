@@ -4,7 +4,18 @@ const updateCart = async function (event) {
   let selectedBtn = event.target;
   if (selectedBtn.matches('.btn') || selectedBtn.matches('i')) {
     let product_id = selectedBtn.dataset.index;
-    fetch
+    const response = await fetch('/api/users/cart', {
+      method: 'POST',
+      body: JSON.stringify({ product_id }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      console.log('Response is OK');
+    } else {
+      console.log('Failed to add to cart. Please try again');
+    }
+  }
 };
 
 // eventHandler added to each product card that triggers when user clicks the cart button.

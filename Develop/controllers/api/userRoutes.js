@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const argon2 = require('argon2');
 const { User, Cart } = require('../../models');
-// const withAuth = require('')
+const withAuth = require('../../utils/auth');
 // CREATE a new user
 router.post('/signup', async (req, res) => {
   try {
@@ -70,15 +70,15 @@ router.post('/logout', (req, res) => {
   }
 });
 
-// router.post('/cart', withAuth, async (req, res) => {
-//   try {
-//     await Cart.create({
-//       product_id: req.body.product_id,
-//       user_id: req.session.user_id,
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+router.post('/cart', withAuth, async (req, res) => {
+  try {
+    await Cart.create({
+      product_id: req.body.product_id,
+      user_id: req.session.user_id,
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 module.exports = router;
