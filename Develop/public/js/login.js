@@ -7,7 +7,7 @@ const loginFormHandler = async (event) => {
   const password = document
     .querySelector('#password-yeeznjays-login')
     .value.trim();
-  console.log('test', username);
+
   if (!username && !password) {
     alert('Username and password can not be blank.');
   } else if (!username) {
@@ -21,8 +21,11 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      console.log('Response is OK');
+    if (!response.ok) {
+      alert('Credentials not found. Please create an account');
+      document.location.replace('/signup');
+    } else if (response.ok) {
+
       document.location.replace('/');
     } else {
       alert('Failed to log in. Please check your credentials.');
