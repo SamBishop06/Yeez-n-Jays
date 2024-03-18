@@ -31,5 +31,6 @@ module.exports = {
   Category,
   Tag,
   User,
+  Cart,
   //ProductTag,
 };
