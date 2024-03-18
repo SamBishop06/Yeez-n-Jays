@@ -132,3 +132,48 @@ footer {
 .btn {
     font-size: 16px;
 }
+
+.remove-button {
+    background-color: lightgray;
+    color: red;
+    border: 2px solid lightgray;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.remove-button:hover {
+    background-color: black;
+    color: red;
+    border-color: lightgray;
+}
+
+.remove-button:active {
+    background-color: black;
+    border-color: lightgray;
+}
+
+.checkout {
+    background-image: linear-gradient(to bottom, #184d4f, #3d8b8d, #6ab8b8, #3d8b8d, #184d4f);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout:hover {
+    background-image: linear-gradient(to bottom, #49a078, #7ec4a3, #b0d9cc, #7ec4a3, #49a078);
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+
+.checkout:active {
+    background-image: linear-gradient(to bottom, #49a078, #7ec4a3, #b0d9cc, #7ec4a3, #49a078);
+    color: white;
+    border: 2px solid white;
+}
