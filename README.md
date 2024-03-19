@@ -32,10 +32,10 @@ Yeez-n-Jays was done in collaboration with coding students Samuel Bishop, Angela
 ## Screenshots
 
 Home Page:
-![Alt Text](/Develop/public/images/home-page.png)
+![Alt Text](/public/images/home-page.png)
 
 Stock Page:
-![Alt Text](/Develop/public/images/stock-page.png)
+![Alt Text](/public/images/stock-page.png)
 
 ## Video
 
